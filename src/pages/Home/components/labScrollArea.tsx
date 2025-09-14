@@ -40,7 +40,7 @@ export default function LabScrollArea({
 
   if (mode) return null
   return (
-    <section className="flex flex-col w-full md:w-3xl lg:w-5xl">
+    <section className="flex flex-col w-full">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-1.5 mb-3">
           {labIcon && labIcon}
@@ -52,7 +52,7 @@ export default function LabScrollArea({
 
       <div
         ref={scrollRef}
-        className="w-full flex items-center gap-3.5 mb-2.5 py-5 px-5 overflow-x-auto cursor-grab"
+        className="w-full flex items-center gap-3.5 mb-2.5 py-5 px-5 overflow-x-auto"
       >
         {data.map((_, i) => (
           <Card
@@ -61,7 +61,7 @@ export default function LabScrollArea({
           >
             <CardContent className="space-y-1 text-muted-foreground">
               {icon ?? <File size={27} />}
-              <h3 className="text-lg font-normal tracking-wide">
+              <h3 className="text-lg font-normal tracking-wide text-primary">
                 ReactJs Kit {i}
               </h3>
               <p className="text-xs font-light tracking-wide">

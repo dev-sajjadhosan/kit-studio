@@ -23,18 +23,18 @@ export default function Home() {
       <Header />
       <div className="flex flex-col gap-3 items-center justify-center mt-16">
         <DynamicGreeting />
-        <Card className=" flex-row items-center gap-0 border-0 bg-zinc-900 w-xl px-3 py-0.5 rounded-lg mb-7">
+        <Card className=" flex-row items-center gap-0 border-0 bg-zinc-900 w-xl px-3 py-0 rounded-lg mb-7">
           <Search size={19} className="text-muted-foreground" />
           <Input
             placeholder="Search your kit or Write your purpose"
-            className="border-0 bg-transparent!"
+            className="border-0 bg-transparent! tracking-wider font-normal text-xs! text-zinc-300"
           />
         </Card>
-        <div className="mt-9 flex flex-col gap-16">
+        <div className="mt-9 flex flex-col gap-16 w-10/12 mx-auto">
           <LabScrollArea
             data={data}
             label={`Studio Kit's`}
-            labIcon={<Store size={17} className='text-muted-foreground' />}
+            labIcon={<Store size={17} className="text-muted-foreground" />}
           />
           {history.length <= 0 ? (
             ''
@@ -42,22 +42,22 @@ export default function Home() {
             <LabScrollArea
               data={history}
               label={`Recently Use`}
-              labIcon={<History size={17} className='text-muted-foreground' />}
+              labIcon={<History size={17} className="text-muted-foreground" />}
             />
           )}
           <LabScrollArea
             data={data}
             label={`Premium Kit's`}
-            labIcon={<Sparkles size={17} className='text-muted-foreground' />}
+            labIcon={<Sparkles size={17} className="text-muted-foreground" />}
           />
           <LabScrollArea
             data={data}
             label={`Trending Kit's`}
-            labIcon={<UserSearch size={17} className='text-muted-foreground' />}
+            labIcon={<UserSearch size={17} className="text-muted-foreground" />}
           />
           <section
             id="announcement"
-            className="w-3xl mx-auto flex flex-col bg-neutral-900 p-11 rounded-xl"
+            className="w-full lg:w-3xl mx-auto flex flex-col bg-neutral-900 p-11 rounded-xl"
           >
             <h3 className="text-xl text-center font-light">
               What's new coming ?

@@ -6,7 +6,7 @@ export default function FrameBar() {
   const { setFrame } = appStore()
   return (
     <>
-      <div className="flex items-center justify-between sticky top-0 left-0 px-2.5 dragOn bg-neutral-900 z-50">
+      <div className="flex items-center justify-between sticky top-0 left-0 px-2.5 dragOn bg-stone-900 z-50">
         <div className="flex items-center gap-2.5">
           <h3 className="text-sm meri">Kit Studio</h3>
         </div>
