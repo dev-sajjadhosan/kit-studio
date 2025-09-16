@@ -1,4 +1,4 @@
-import Header from '@/components/custom/header'
+// import Header from '@/components/custom/header'
 import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import DynamicGreeting from '@/pages/Home/components/dynamicGreeting'
@@ -20,7 +20,7 @@ export default function Home() {
   const { history } = localStore()
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className="flex flex-col gap-3 items-center justify-center mt-16">
         <DynamicGreeting />
         <Card className=" flex-row items-center gap-0 border-0 bg-zinc-900 w-xl px-3 py-0 rounded-lg mb-7">

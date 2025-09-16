@@ -10,6 +10,8 @@ interface LocalStore {
 
   history: History[]
 
+  setLeftSide: (v: boolean) => void
+  setShowHistory: (v: boolean) => void
   setHistory: (h: History) => void
   setIsNew: (v: boolean) => void
   setDialogKitTab: (v: number) => void
@@ -28,6 +30,8 @@ export const localStore = create<LocalStore>()(
       showHistory: false,
       dialogKitTab: 0,
 
+      setLeftSide: (v) => set({ leftSidebar: v }),
+      setShowHistory: (v) => set({ showHistory: v }),
       setHistory: (h: History) => set((s) => ({ history: [...s.history, h] })),
       setIsNew: (v) => set({ isNew: v }),
       setDialogKitTab: (v) => set({ dialogKitTab: v }),
