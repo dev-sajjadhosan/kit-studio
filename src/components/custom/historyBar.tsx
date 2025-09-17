@@ -27,7 +27,7 @@ export default function HistoryBar() {
             action={toggleShowHistory}
           />
         </DrawerTrigger>
-        <DrawerContent className="p-2 w-80!">
+        <DrawerContent className="p-2 w-xs">
           <DrawerHeader className="flex flex-row items-center justify-between">
             <h3 className="text-sm font-medium">Your History</h3>
           </DrawerHeader>

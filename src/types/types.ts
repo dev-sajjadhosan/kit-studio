@@ -12,7 +12,7 @@ export interface History {
 export interface MenuProps {
   id?: number
   title: string
-  url: string
-  icon: LucideIcon
+  url?: string
+  icon?: LucideIcon
   children?: MenuProps[]
 }

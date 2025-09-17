@@ -48,8 +48,8 @@ export default function LeftSidebar() {
               </Button>
             </DrawerClose>
           </DrawerHeader>
-          <div className=" flex flex-col justify-between h-full">
-            <ul className="flex flex-col gap-1 font-medium tracking-wide capitalize overflow-y-scroll h-[28rem] p-3.5">
+          <div className=" flex flex-col justify-between h-full relative">
+            <ul className="flex flex-col gap-1 font-medium tracking-wide capitalize overflow-y-scroll h-[28rem] lg:h-[39rem] p-3.5">
               {menuItems.map((item, index) => (
                 <SidebarItem key={index} item={item} />
               ))}
@@ -72,9 +72,7 @@ export default function LeftSidebar() {
                     <p className="text-xs capitalize">creator</p>
                   </div>
                 </div>
-                <span className="[&_svg]:size-5">
-                  <UserRoundCog />
-                </span>
+                <TooltipBtn label="User" icon={<UserRoundCog />} />
               </div>
             </div>
           </div>
@@ -100,15 +98,19 @@ function SidebarItem({ item }: { item: MenuProps }) {
             </summary>
 
             <ul className="ml-5 mt-1 flex flex-col gap-1 border-l border-secondary pl-3">
-              {item.children.map((child, j) => (
-                <li
-                  key={j}
-                  className="hover:bg-secondary text-[11px] active:scale-95 cursor-pointer duration-150 px-3 py-2 rounded-md flex items-center gap-1.5 [&_svg]:size-4"
-                >
-                  {child.icon && <child.icon />}
-                  <a href={child.url}>{child.title}</a>
-                </li>
-              ))}
+              {item.children.map((child, j) =>
+                child.title === 'sep' ? (
+                  <Separator />
+                ) : (
+                  <li
+                    key={j}
+                    className="hover:bg-secondary text-[11px] active:scale-95 cursor-pointer duration-150 px-3 py-2 rounded-md flex items-center gap-1.5 [&_svg]:size-4"
+                  >
+                    {child.icon && <child.icon />}
+                    <a href={child.url}>{child.title}</a>
+                  </li>
+                ),
+              )}
             </ul>
           </details>
         </li>
