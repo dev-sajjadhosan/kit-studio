@@ -30,6 +30,8 @@ import {
   Cog,
   Columns3Cog,
   Bot,
+  Plus,
+  Command,
 } from 'lucide-react'
 
 import LeftSidebar from '@/components/custom/leftSideBar'
@@ -45,12 +47,14 @@ import ConnectDialog from '@/components/custom/connectDialog'
 
 export default function FrameBar() {
   const { setFrame } = appStore()
-  const { showKitty, setShowKitty } = localStore()
+  const { showKitty, setShowKitty, setCreateDialog, createDialog } =
+    localStore()
   return (
     <>
       <CustomizeModal />
+      <CreateNewDialog />
       {/*  */}
-      <div className="flex items-center justify-between sticky top-0 left-0 px-3.5 py-2.5 dragOn">
+      <div className="flex items-center justify-between sticky top-0 left-0 px-3.5 py-2.5 dragOn z-10">
         <div className="flex items-center gap-5 dragOff">
           <div className="flex items-center gap-2.5">
             <h3 className="text-sm meri">Kit Studio</h3>
@@ -68,7 +72,14 @@ export default function FrameBar() {
         </div>
         <div className="flex items-center gap-13 dragOff">
           <div className="flex items-center gap-1">
-            <CreateNewDialog />
+            <Button
+              size={'sm'}
+              variant={'secondary'}
+              onClick={() => setCreateDialog(!createDialog)}
+            >
+              <Plus />
+              {/* Create New */}
+            </Button>
             {/* show modal with category with pre-build customeble kit / templetes or cretae his own and then publish import it */}
             {/* <TooltipBtn icon={<Boxes />} label="Kit Manager" /> */}
             <Link to={'/setting'}>
@@ -209,6 +220,11 @@ function MoreOptions() {
           <Link to={'/what_is_new'}>
             <DropdownMenuItem>
               <Gem /> What's new
+            </DropdownMenuItem>
+          </Link>
+          <Link to={'/kbd_shortcut'}>
+            <DropdownMenuItem>
+              <Command /> Keyboard Shortcut
             </DropdownMenuItem>
           </Link>
           <Link to={'/about_us'}>

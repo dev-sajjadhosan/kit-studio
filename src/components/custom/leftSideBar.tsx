@@ -39,7 +39,7 @@ export default function LeftSidebar() {
             side="left"
           />
         </DrawerTrigger>
-        <DrawerContent className="p-1.5 w-72!">
+        <DrawerContent className="w-72!">
           <DrawerHeader className="flex flex-row items-center justify-between">
             <h3 className="meri font-medium">Kit Studio</h3>
             <DrawerClose>
@@ -49,14 +49,14 @@ export default function LeftSidebar() {
             </DrawerClose>
           </DrawerHeader>
           <div className=" flex flex-col justify-between h-full relative">
-            <ul className="flex flex-col gap-1 font-medium tracking-wide capitalize overflow-y-scroll h-[28rem] lg:h-[39rem] p-3.5">
+            <ul className="flex flex-col gap-1 font-medium tracking-wide capitalize overflow-y-scroll  h-[29rem] p-3.5">
               {menuItems.map((item, index) => (
                 <SidebarItem key={index} item={item} />
               ))}
             </ul>
-            <div className="space-y-1.5">
+            <div className="space-y-1.5 fixed bottom-0 w-full bg-neutral-900">
               <Separator />
-              <div className="flex items-center justify-between border-l-4 border-l-transparent hover:border-l-accent px-3 py-2 rounded-xs">
+              <div className="flex items-center justify-between border-l-4 border-l-transparent hover:border-l-accent px-3 py-2 rounded-xs ">
                 <div className="flex items-center gap-2">
                   <Avatar className="w-7 h-7">
                     <AvatarImage

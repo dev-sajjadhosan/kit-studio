@@ -6,6 +6,8 @@ import { Label } from '@/components/ui/label'
 import { Cable } from 'lucide-react'
 
 export default function ConnectDialog() {
+  // when use press the 'A' & click any of the option then show a details dialog box
+  // if press the 'V' & click any of the option then visit the official page
   return (
     <>
       <Dialog>
@@ -23,12 +25,21 @@ export default function ConnectDialog() {
           </div>
           <div className="mt-5 space-y-5">
             <div className="flex flex-col gap-2.5">
+              <Label>Your Default Browser (only for studio)</Label>
+              <div className="flex items-center gap-3">
+                <Button>Chrome</Button>
+                <Button>Microsoft Edge</Button>
+                <Button>Brave</Button>
+                <Button>Add</Button>
+              </div>
+            </div>
+            <div className="flex flex-col gap-2.5">
               <Label>Your Local Machine</Label>
               <div className="flex items-center gap-3">
                 <Button>VsCode</Button>
                 <Button>Cursor</Button>
                 <Button>Tauri</Button>
-                <Button>Other</Button>
+                <Button>Add</Button>
               </div>
             </div>
             <div className="flex flex-col gap-2.5">
@@ -39,7 +50,7 @@ export default function ConnectDialog() {
                 <Button>Vercel</Button>
                 <Button>Railway</Button>
                 <Button>Netlify</Button>
-                <Button>Other</Button>
+                <Button>Add</Button>
               </div>
             </div>
             <div className="flex flex-col gap-2.5">
@@ -48,7 +59,7 @@ export default function ConnectDialog() {
                 <Button>MongoDB</Button>
                 <Button>Surbase</Button>
                 <Button>FireStore</Button>
-                <Button>Other</Button>
+                <Button>Add</Button>
               </div>
             </div>
           </div>

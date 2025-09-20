@@ -9,6 +9,7 @@ import AboutUsPage from '@/pages/aboutUs/aboutUs'
 import TemplatesPage from '@/pages/templates/templates'
 import KittyChatBox from '@/components/custom/kittyChatBox'
 import KittyChat from '@/pages/kittychat/kittychat'
+import CreateKitPage from '@/pages/createKit/createKit'
 
 export default function Layout() {
   return (
@@ -25,6 +26,7 @@ export default function Layout() {
             <Route path="/about_us" element={<AboutUsPage />} />
             <Route path="/templates" element={<TemplatesPage />} />
             <Route path="/kitty" element={<KittyChat />} />
+            <Route path="/create-kit/:id" element={<CreateKitPage />} />
           </Routes>
         </ThemeProvider>
       </BrowserRouter>

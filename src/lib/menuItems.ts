@@ -14,6 +14,8 @@ import {
   Sparkles,
   Smartphone,
   Bot,
+  PencilLine,
+  PackagePlus,
 } from 'lucide-react'
 
 export const menuItems = [
@@ -102,5 +104,40 @@ export const menuItems = [
     title: 'Settings',
     url: '#',
     icon: Settings,
+  },
+]
+
+export const NextDialogMenus = [
+  {
+    id: 1,
+    title: 'Create Kit',
+    url: '#',
+    icon: Inbox,
+    children: [
+      { title: 'web kit', url: 'web', icon: Code },
+      { title: 'backend kit', url: 'backend', icon: Server },
+      { title: 'database kit', url: 'database', icon: Database },
+      { title: 'mobile kit', url: 'mobile', icon: Smartphone },
+      { title: 'al & ml kit', url: 'ai_ml', icon: Sparkles },
+    ],
+  },
+  {
+    id: 2,
+    title: 'Use Custom Kit',
+    url: '#',
+    icon: PencilLine,
+    children: [
+      { title: 'web kit', url: 'web', icon: Code },
+      { title: 'backend kit', url: 'backend', icon: Server },
+      { title: 'database kit', url: 'database', icon: Database },
+      { title: 'mobile kit', url: 'mobile', icon: Smartphone },
+      { title: 'al & ml kit', url: 'al_ml', icon: Sparkles },
+    ],
+  },
+  {
+    id: 3,
+    title: 'create pkg',
+    url: '#',
+    icon: PackagePlus,
   },
 ]
